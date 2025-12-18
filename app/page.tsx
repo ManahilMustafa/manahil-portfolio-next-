@@ -231,7 +231,7 @@ export default function Portfolio() {
           <div className="animate-fade-in-up">
             <h1 className="font-heading font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6">
               <Typewriter
-                text="Frontend & Wordpress Developer"
+                text="Frontend Developer"
                 delay={80}
                 className="text-primary"
               />
@@ -281,78 +281,87 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 bg-card">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-              Skills & Technologies
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Technologies I work with to build amazing digital experiences
-            </p>
-          </div>
+   {/* Skills Section */}
+<section id="skills" className="py-20 bg-card overflow-hidden">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Heading */}
+    <div className="text-center mb-16 animate-fade-in-up">
+      <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
+        Skills & Technologies
+      </h2>
+      <p className="text-muted-foreground text-lg">
+        Technologies I work with to build amazing digital experiences
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="animate-slide-in-left">
-              <CardHeader>
-                <CardTitle className="font-heading flex items-center gap-2">
-                  <Code className="h-6 w-6 text-primary " />
-                  Frontend / React Development
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "React.js",
-                    "JavaScript (ES6+)",
-                    "HTML5",
-                    "CSS3",
-                    "Tailwind CSS",
-                    "Bootstrap",
-                    "Redux",
-                    "API Integration",
-                    "OAuth",
-                    "Responsive Design",
-                    "Git & GitHub",
-                    "Netlify",
-                    "Vercel",
-                  ].map((skill) => (
-                    <Badge key={skill} variant="secondary">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="animate-slide-in-left animate-delay-200">
-              <CardHeader>
-                <CardTitle className="font-heading flex items-center gap-2">
-                  <Palette className="h-6 w-6 text-accent mb-10" />
-                  WordPress Development
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Elementor",
-                    "Elementor Pro",
-                    "WooCommerce",
-                    "SEO Optimization",
-                    "Html, Css, Js",
-                    "Performance Optimization",
-                  ].map((skill) => (
-                    <Badge key={skill} variant="outline">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Frontend / React Card */}
+      <Card className="h-full animate-slide-in-left">
+        <CardHeader>
+          <CardTitle className="font-heading flex items-center gap-2">
+            <Code className="h-6 w-6 text-primary" />
+            Frontend / React Development
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-2 items-start">
+            {[
+              "React.js",
+              "Next.js",
+              "Typescript",
+              "GSAP, FRAMER",
+              "JavaScript (ES6+)",
+              "HTML5",
+              "CSS3",
+              "Tailwind CSS",
+              "Bootstrap",
+              "Redux",
+              "API Integration",
+              "OAuth",
+              "Responsive Design",
+              "Git & GitHub",
+              "Netlify",
+              "Vercel",
+            ].map((skill) => (
+              <Badge key={skill} variant="secondary">
+                {skill}
+              </Badge>
+            ))}
           </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
+
+      {/* WordPress Card */}
+      <Card className="h-full animate-slide-in-left animate-delay-200">
+        <CardHeader>
+         <CardTitle className="font-heading flex items-center gap-2">
+  <Palette className="h-6 w-6 text-accent" />
+  WordPress Development
+</CardTitle>
+
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-2 items-start">
+            {[
+              "Elementor",
+              "Elementor Pro",
+              "WooCommerce",
+              "SEO Optimization",
+              "HTML, CSS, JS",
+              "Performance Optimization",
+            ].map((skill) => (
+              <Badge key={skill} variant="outline">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
 
       {/* Experience Section */}
       <section id="experience" className="py-20">
@@ -362,7 +371,7 @@ export default function Portfolio() {
               Experience
             </h2>
             <p className="text-muted-foreground text-lg">
-              2 years of professional development experience
+              2+ years of professional development experience
             </p>
           </div>
 
@@ -469,46 +478,50 @@ export default function Portfolio() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
                 {[
                   {
+                    title: "Healix-Ai",
+                    description:
+                       "An AI-powered health assistant with both text and voice interfaces. Designed to help users with medical queries, provide health guidance, and interact through an intuitive chat interface using React and Tailwind CSS.",
+                    tech: [
+                      "Next",
+                      "Typescript",
+                      "Tailwind CSS",
+                      "Shadcn UI",
+                    ],
+                    image: "/healix.PNG",
+                    featured: true,
+                    span: "md:col-span-2 lg:col-span-2",
+                    codeLink:
+                      "https://github.com/ManahilMustafa/healix",
+                    liveLink: "/",
+                  },
+                  {
                     title: "SABZA Admin Panel",
                     description:
                       "An admin dashboard built with React, Tailwind CSS, Shadcn UI, and OAuth authentication. Designed to manage SABZA’s climate and sustainability projects with a clean UI, project listings, updates, and role-based access.",
-                    tech: [
+                   tech: [
                       "React",
                       "OAuth",
                       "Chart.js",
                       "Tailwind CSS",
                       "Shadcn UI",
                     ],
-                    image: "/sabza.JPG",
-                    featured: true,
-                    span: "md:col-span-2 lg:col-span-2",
-                    codeLink:
+                   image: "/sab.PNG",
+                    span: "lg:col-span-1",
+                  codeLink:
                       "https://github.com/ManahilMustafa/Admin-Panel-SabzaProjects",
                     liveLink: "https://admin-panel-sabza-projects.vercel.app/",
                   },
-                  {
-                    title: "The BlackArt",
-                    description:
-                      "An online art marketplace featuring real-time bidding and painting sales. Built with React and Tailwind, it includes live auctions, interactive dashboards, and seamless REST API integration for smooth user experience.",
-                    tech: ["React", "REST API", "Tailwind"],
-                    image: "/seven.png",
-                    span: "lg:col-span-1",
-                    codeLink:
-                      "https://github.com/ManahilMustafa/ArtMart-Gallery",
-                    liveLink: "https://theblackart.temp2025.com/",
-                  },
-                  {
-                    title: "Prescripto: Doctor Appointment",
-                    description:
-                      "A doctor appointment booking platform built with Next.js and TypeScript. It features patient registration, doctor listings, scheduling, and a responsive UI, deployed on Vercel for fast performance.",
-                    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-                    image: "/doctor.png",
-                    span: "lg:col-span-1",
-                    codeLink:
-                      "https://github.com/ManahilMustafa/doctor-appointment-site",
-                    liveLink:
-                      "https://doctor-appointment-site-neon.vercel.app/",
-                  },
+                 {
+  title: "Fasil Law Bot",
+  description:
+    "An AI-powered chatbot that answers queries related to Excise Law. Built with Next.js, Tailwind CSS, and GSAP for smooth animations. Features an interactive chat interface with responsive design and real-time responses.",
+  tech: ["Next.js", "Tailwind CSS", "GSAP", "Chatbot AI"],
+  image: "/fasil.PNG", 
+  span: "lg:col-span-1",
+  codeLink: "https://github.com/ManahilMustafa/fasil-ai",
+  liveLink: "https://fasil-ai.vercel.app/", 
+},
+
                   {
                     title: "Gericht: Restaurant Menu",
                     description:
@@ -529,7 +542,17 @@ export default function Portfolio() {
                     codeLink: "https://github.com/ManahilMustafa/Scrowise",
                     liveLink: "https://scrowise.vercel.app/#",
                   },
-                  {
+                 {
+  title: "Equi-Predict",
+  description:
+    "An AI-powered platform to predict horse offspring quality for smarter mating, training, and investment decisions. Built with React and Tailwind CSS, featuring a responsive UI and smooth animations.",
+  tech: ["Next", "Tailwind CSS", "JavaScript", "AI/ML"],
+  image: "/predict.PNG",
+  span: "md:col-span-2 lg:col-span-2",
+  codeLink: "https://github.com/ManahilMustafa/Equi-Predict",
+  liveLink: "/",
+},
+                   {
                     title: "Brainwave",
                     description:
                       "A modern personal portfolio website built with React and Tailwind CSS. It showcases projects, skills, and experience with a stylish UI, smooth animations, and responsive design.",
@@ -540,6 +563,28 @@ export default function Portfolio() {
                       "https://github.com/ManahilMustafa/Brainwave-react",
                     liveLink: "https://brainwave-react-five.vercel.app/",
                   },
+                {
+  title: "Alif-OCR",
+  description:
+    "An AI-powered OCR platform that converts Arabic handwritten notes into clear, readable Arabic text. Built with React and Framer for smooth animations, featuring a responsive and user-friendly interface.",
+  tech: ["React", "Framer", "JavaScript", "OCR/AI"],
+  image: "/alif.PNG",
+  span: "lg:col-span-1",
+  codeLink: "https://github.com/ManahilMustafa/alif-ocr",
+  liveLink: "/",
+},
+
+                 {
+  title: "Smart-FC-AI",
+  description:
+    "A real-time AI-powered analytics platform for football performance. Built with React, Node.js, Express, and MongoDB, it tracks player stats, provides performance insights, and visualizes data for coaches and analysts.",
+  tech: ["NEXT", "GSAP", "Tailwind", "MongoDB", "AI Analytics"],
+  image: "/smart-fc.PNG",
+  span: "lg:col-span-1",
+  codeLink: "https://github.com/ManahilMustafa/smart-fc-ai",
+  liveLink: "#",
+}
+
                 ].map((project, index) => (
                   <Card
                     key={index}
@@ -548,17 +593,14 @@ export default function Portfolio() {
                     }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div
-                      className={`${
-                        project.featured ? "aspect-[4/3]" : "aspect-video"
-                      } bg-muted rounded-t-lg overflow-hidden`}
-                    >
-                      <img
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                   <div className="bg-muted rounded-t-lg overflow-hidden">
+  <img
+    src={project.image || "/placeholder.svg"}
+    alt={project.title}
+    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+  />
+</div>
+
                     <CardHeader className={project.featured ? "pb-4" : "pb-2"}>
                       <CardTitle
                         className={`font-heading text-primary ${
