@@ -492,7 +492,7 @@ export default function Portfolio() {
                     span: "md:col-span-2 lg:col-span-2",
                     codeLink:
                       "https://github.com/ManahilMustafa/healix",
-                    liveLink: "/",
+                    liveLink: "https://healix-ai-frontend-678863056116.europe-west1.run.app/",
                   },
                   {
                     title: "SABZA Admin Panel",
@@ -519,7 +519,7 @@ export default function Portfolio() {
   image: "/fasil.PNG", 
   span: "lg:col-span-1",
   codeLink: "https://github.com/ManahilMustafa/fasil-ai",
-  liveLink: "https://fasil-ai.vercel.app/", 
+  liveLink: "https://fasil-law-assistant-frontend-1000247802656.europe-west1.run.app/", 
 },
 
                   {
@@ -571,7 +571,7 @@ export default function Portfolio() {
   image: "/alif.PNG",
   span: "lg:col-span-1",
   codeLink: "https://github.com/ManahilMustafa/alif-ocr",
-  liveLink: "/",
+  liveLink: "https://alif-ocr-frontend-576368443674.europe-west1.run.app/",
 },
 
                  {
@@ -582,7 +582,7 @@ export default function Portfolio() {
   image: "/smart-fc.PNG",
   span: "lg:col-span-1",
   codeLink: "https://github.com/ManahilMustafa/smart-fc-ai",
-  liveLink: "#",
+  liveLink: "https://smart-fc-frontend-678863056116.europe-west1.run.app/",
 }
 
                 ].map((project, index) => (
