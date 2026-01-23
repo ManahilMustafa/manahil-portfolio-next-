@@ -237,8 +237,8 @@ export default function Portfolio() {
               />
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              2+ Years of Experience in React.js & WordPress | Turning Ideas
-              into Powerful Web Experiences
+               2+ Years of Experience in React.js, WordPress & UI Design | Crafting
+               Seamless and Stunning Web Experiences
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-200">
               <Button
@@ -446,7 +446,7 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
+{/* projects */}
       <section id="projects" className="py-20 bg-card">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -459,20 +459,26 @@ export default function Portfolio() {
           </div>
 
           <Tabs defaultValue="code" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 bg-muted">
-              <TabsTrigger
-                value="code"
-                className="font-heading data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-              >
-                Code Projects
-              </TabsTrigger>
-              <TabsTrigger
-                value="wordpress"
-                className="font-heading data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
-              >
-                WordPress Projects
-              </TabsTrigger>
-            </TabsList>
+           <TabsList className="grid w-full grid-cols-3 mb-8 bg-muted">
+    <TabsTrigger
+      value="code"
+      className="font-heading data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+    >
+      Code Projects
+    </TabsTrigger>
+     <TabsTrigger
+      value="ui"
+      className="font-heading data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+    >
+      UI Designing & Dev
+    </TabsTrigger>
+    <TabsTrigger
+      value="wordpress"
+      className="font-heading data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
+    >
+      WordPress Projects
+    </TabsTrigger>
+  </TabsList>
 
             <TabsContent value="code" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
@@ -494,23 +500,16 @@ export default function Portfolio() {
                       "https://github.com/ManahilMustafa/healix",
                     liveLink: "https://healix-ai-frontend-678863056116.europe-west1.run.app/",
                   },
-                  {
-                    title: "SABZA Admin Panel",
-                    description:
-                      "An admin dashboard built with React, Tailwind CSS, Shadcn UI, and OAuth authentication. Designed to manage SABZA’s climate and sustainability projects with a clean UI, project listings, updates, and role-based access.",
-                   tech: [
-                      "React",
-                      "OAuth",
-                      "Chart.js",
-                      "Tailwind CSS",
-                      "Shadcn UI",
-                    ],
-                   image: "/sab.PNG",
-                    span: "lg:col-span-1",
-                  codeLink:
-                      "https://github.com/ManahilMustafa/Admin-Panel-SabzaProjects",
-                    liveLink: "https://admin-panel-sabza-projects.vercel.app/",
-                  },
+                   {
+          title: "Aynigma-Security",
+          description:
+            "Aynigma Guard – AI & cybersecurity platform. Personally designed & developed the website.",
+          tech: ["Next.js", "Tailwind CSS", "Typescript"],
+          image: "/anygama.PNG",
+          span: "md:col-span-2 lg:col-span-2",
+          codeLink: "https://github.com/ManahilMustafa/aynigma-security",
+          liveLink: "https://aynigma-security.vercel.app/",
+        },
                  {
   title: "Fasil Law Bot",
   description:
@@ -799,6 +798,126 @@ export default function Portfolio() {
                 ))}
               </div>
             </TabsContent>
+             {/* --- UI Designing & Dev Projects --- */}
+  <TabsContent value="ui" className="space-y-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
+      {[
+        {
+          title: "Aynigma-Security",
+          description:
+            "Aynigma Guard – AI & cybersecurity platform. Personally designed & developed the website.",
+          tech: ["Next.js", "Tailwind CSS", "Typescript"],
+          image: "/anygama.PNG",
+          span: "md:col-span-2 lg:col-span-2",
+          codeLink: "https://github.com/ManahilMustafa/aynigma-security",
+          liveLink: "https://aynigma-security.vercel.app/",
+        },
+        {
+          title: "Healix-Ai",
+          description:
+            "AI-powered health assistant interface with intuitive UI/UX built using Next.js and Tailwind CSS.",
+          tech: ["Next.js", "Tailwind CSS", "Shadcn UI"],
+          image: "/healix.PNG",
+          span: "md:col-span-2 lg:col-span-2",
+          codeLink: "https://github.com/ManahilMustafa/healix",
+          liveLink: "https://healix-ai-frontend-678863056116.europe-west1.run.app/",
+        },
+        {
+          title: "Gericht: Restaurant Menu",
+          description:
+            "Modern restaurant menu website highlighting interactive UI and smooth user experience.",
+          tech: ["React", "Framer", "JavaScript"],
+          image: "/menu.png",
+          span: "lg:col-span-1",
+          codeLink: "#",
+          liveLink: "https://resturant-jsx.vercel.app/",
+        },
+        {
+          title: "Alif-OCR",
+          description:
+            "AI-powered OCR platform focusing on clean UI design for Arabic handwritten text conversion.",
+          tech: ["React", "Framer", "OCR/AI"],
+          image: "/alif.PNG",
+          span: "lg:col-span-1",
+          codeLink: "https://github.com/ManahilMustafa/alif-ocr",
+          liveLink: "https://alif-ocr-frontend-576368443674.europe-west1.run.app/",
+        },
+      ].map((project, index) => (
+        <Card
+          key={index}
+          className={`card-hover group border-border/50 bg-card/50 backdrop-blur-sm animate-fade-in-up ${
+            project.span || ""
+          }`}
+          style={{ animationDelay: `${index * 0.1}s` }}
+        >
+          <div className="bg-muted rounded-t-lg overflow-hidden">
+            <img
+              src={project.image || "/placeholder.svg"}
+              alt={project.title}
+              className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <CardHeader className={project.featured ? "pb-4" : "pb-2"}>
+            <CardTitle
+              className={`font-heading text-primary ${
+                project.featured ? "text-xl" : "text-lg"
+              }`}
+            >
+              {project.title}
+            </CardTitle>
+            <CardDescription className="text-muted-foreground text-sm">
+              {project.description}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <div className="flex flex-wrap gap-1 mb-4">
+              {project.tech.slice(0, 4).map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="secondary"
+                  className="bg-muted text-foreground text-xs"
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+            <div className="flex gap-2">
+              <Button
+                asChild
+                size="sm"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent flex-1"
+              >
+                <a
+                  href={project.codeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-4 w-4 mr-1" />
+                  Code
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="sm"
+                className="bg-accent hover:bg-accent/90 flex-1"
+              >
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="h-4 w-4 mr-1" />
+                  Live
+                </a>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </TabsContent>
           </Tabs>
         </div>
       </section>
