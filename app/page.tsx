@@ -33,6 +33,16 @@ import { TestimonialsCarousel } from "@/components/ui/testimonials-carousel";
 import { SiFiverr } from "react-icons/si";
 
 export default function Portfolio() {
+  interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  image: string;
+  span?: string;
+  codeLink?: string;
+  liveLink: string;
+  featured?: boolean; // The '?' makes it optional, so false/undefined won't crash the build
+}
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -584,7 +594,7 @@ export default function Portfolio() {
   liveLink: "https://smart-fc-frontend-678863056116.europe-west1.run.app/",
 }
 
-                ].map((project, index) => (
+                ].map((project: Project, index: number) => (
                   <Card
                     key={index}
                     className={`card-hover group border-border/50 bg-card/50 backdrop-blur-sm animate-fade-in-up ${
@@ -732,7 +742,7 @@ export default function Portfolio() {
                     span: "md:col-span-2 lg:col-span-2",
                     liveLink: "https://www.recipetineats.com/",
                   },
-                ].map((project, index) => (
+                ].map((project: Project, index: number) => (
                   <Card
                     key={index}
                     className={`card-hover group border-border/50 bg-card/50 backdrop-blur-sm animate-fade-in-up ${
@@ -842,7 +852,7 @@ export default function Portfolio() {
           codeLink: "https://github.com/ManahilMustafa/alif-ocr",
           liveLink: "https://alif-ocr-frontend-576368443674.europe-west1.run.app/",
         },
-      ].map((project, index) => (
+      ].map((project: Project, index: number) => (
         <Card
           key={index}
           className={`card-hover group border-border/50 bg-card/50 backdrop-blur-sm animate-fade-in-up ${

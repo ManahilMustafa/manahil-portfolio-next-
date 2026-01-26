@@ -29,8 +29,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${openSans.variable} antialiased`}>
-      <body className="font-body">{children}</body>
+    // yahan html tag par suppressHydrationWarning add kiya hai
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable} antialiased`} suppressHydrationWarning>
+      <body className="font-body" suppressHydrationWarning>{children}</body>
     </html>
   );
 }
