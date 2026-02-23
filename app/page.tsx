@@ -154,11 +154,13 @@ export default function Portfolio() {
       <nav className="fixed top-0 w-full bg-background/90 backdrop-blur-md border-b border-border z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-heading font-bold text-xl text-primary">
-              <span className="text-accent">&lt;</span>
-              Manahil
-              <span className="text-accent">/&gt;</span>
-            </div>
+           <div className="font-heading font-bold text-xl text-primary mt-2">
+  <img
+    src="/white-logo.png"      // path to your logo
+    alt="Logo"
+    className="h-16 w-auto" // adjust height & width as needed
+  />
+</div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
@@ -1052,7 +1054,7 @@ export default function Portfolio() {
       <footer className="py-8 border-t border-border bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-muted-foreground">
-            © 2025, Manahil Mustafa. <span className="text-primary"></span>{" "}
+            © 2026, Manahil Mustafa. <span className="text-primary"></span>{" "}
           </p>
         </div>
       </footer>
